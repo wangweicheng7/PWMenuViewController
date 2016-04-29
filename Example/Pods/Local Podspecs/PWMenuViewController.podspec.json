@@ -1,0 +1,19 @@
+{
+  "name": "PWMenuViewController",
+  "version": "0.1.0",
+  "summary": "A short description of PWMenuViewController.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/PWMenuViewController",
+  "license": "MIT",
+  "authors": {
+    "Paul Wang": "wang_weicheng@126.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/PWMenuViewController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "PWMenuViewController/Classes/**/*"
+}

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'PWMenuViewController_Example', :exclusive => true do
+  pod 'PWMenuViewController', :path => '../'
+end
+
+target 'PWMenuViewController_Tests', :exclusive => true do
+  pod 'PWMenuViewController', :path => '../'
+
+  
+end

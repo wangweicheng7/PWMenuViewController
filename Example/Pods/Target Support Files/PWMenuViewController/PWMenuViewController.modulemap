@@ -1,0 +1,6 @@
+framework module PWMenuViewController {
+  umbrella header "PWMenuViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

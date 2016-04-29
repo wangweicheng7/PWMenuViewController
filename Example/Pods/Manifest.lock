@@ -1,0 +1,14 @@
+PODS:
+  - PWMenuViewController (0.1.0)
+
+DEPENDENCIES:
+  - PWMenuViewController (from `../`)
+
+EXTERNAL SOURCES:
+  PWMenuViewController:
+    :path: ../
+
+SPEC CHECKSUMS:
+  PWMenuViewController: 298326516dc4819854565487cec1c9be86cfe97f
+
+COCOAPODS: 0.39.0
