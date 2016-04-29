@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "PWMenuViewController"
   s.version          = "0.1.0"
-  s.summary          = "顶部滑动菜单."
+  s.summary          = "仿科技头条顶部滑动菜单."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
