@@ -27,6 +27,23 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "PWMenuViewController"
 ```
+follow
+
+```
+[self.menuTitles addObject:@"夏天来了"];
+[self.menuTitles addObject:@"春天去了"];
+[self.menuTitles addObject:@"秋天还远"];
+[self.menuTitles addObject:@"冬天很冷"];
+
+[self.bottomViews addObject:self.testView];
+[self.bottomViews addObject:self.testView1];
+[self.bottomViews addObject:self.testView2];
+[self.bottomViews addObject:self.testView3];
+
+[self loadSubViews];
+```
+
+__tips:the code `[self loadSubViews];` must in the end.__  
 
 ## Author
 
