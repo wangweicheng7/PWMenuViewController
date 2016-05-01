@@ -5,11 +5,19 @@
 [![License](https://img.shields.io/cocoapods/l/PWMenuViewController.svg?style=flat)](http://cocoapods.org/pods/PWMenuViewController)
 [![Platform](https://img.shields.io/cocoapods/p/PWMenuViewController.svg?style=flat)](http://cocoapods.org/pods/PWMenuViewController)
 
+## Show
+This is a demo.
+
+[![效果图](https://github.com/wangweicheng7/PWMenuViewController/blob/master/demo.gif)](https://github.com/wangweicheng7/PWMenuViewController/blob/master/demo.gif)
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+```
+iOS 7.O 及以上
+```
 
 ## Installation
 
