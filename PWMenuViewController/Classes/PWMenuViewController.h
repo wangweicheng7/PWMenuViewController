@@ -16,17 +16,14 @@
 @property (nonatomic, strong) NSMutableArray *bottomViews;
 @property (nonatomic, strong) NSMutableArray *menuTitles;
 @property (nonatomic, copy) NSString         *currentPage;
-@property (nonatomic, strong) UIImageView    *lineIv;
-@property (nonatomic, assign) CGSize         buttonSize;
-@property (nonatomic, assign) CGSize         lineSize;
+@property (nonatomic, strong) UIImageView   *flagImageView;
+
 @property (nonatomic, strong) UIScrollView    *menuScrollView;
 @property (nonatomic, strong) UIScrollView    *bottomScrollView;
-@property float ControllerHeight;
-
-- (void)turnToPage:(NSInteger)page;
+@property (nonatomic, strong) UIColor   *tintColor;
 
 - (instancetype)init;
 
-- (void)reloadSubViews;
+- (void)loadSubViews;
 
 @end

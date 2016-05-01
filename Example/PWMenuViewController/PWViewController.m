@@ -36,7 +36,7 @@
     [self.bottomViews addObject:self.testView2];
     [self.bottomViews addObject:self.testView3];
     
-    [self reloadSubViews];
+    [self loadSubViews];
     
 }
 
