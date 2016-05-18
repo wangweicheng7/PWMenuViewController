@@ -21,16 +21,12 @@
 #import "PWMenuViewController.h"
 #import <CoreText/CoreText.h>
 
+
+static void * MenuScrollFrameContext = &MenuScrollFrameContext;
+
+
 @interface PWMenuViewController ()<UIScrollViewDelegate> {
-//    UILabel         *_line;
-//    NSMutableArray  *_centerArr;
-//    NSMutableArray  *_widthArr;
-    float           _bottomLastOffsetX;
-//    CGFloat         _lineLastX;     // 下划线上一次的横坐标点
-//    NSInteger       _prePage;
-//    NSInteger       _finalPage;
-//    BOOL            _isBtnClick;
-//    UIView          *_moreView;
+    float           _bottomLastOffsetX; // 底部滚动视图最后一次的横向偏移量
 }
 
 @property (nonatomic, strong) NSMutableArray    *centerArr;
@@ -40,6 +36,18 @@
 @end
 
 @implementation PWMenuViewController
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self.menuScrollView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:MenuScrollFrameContext];
+        _currentPage = 0;
+    }
+    return self;
+}
+
+- (void)dealloc {
+    [self.menuScrollView removeObserver:self forKeyPath:@"frame"];
+}
 
 - (void)loadSubViews {
     
@@ -81,7 +89,17 @@
     
 }
 
-#pragma mark - event
+#pragma mark event
+
+- (void)showViewAtIndex:(NSInteger)index {
+    _currentPage = index;
+}
+
+- (void)setMenuTitle:(NSString *)title atIndex:(NSInteger)index {
+    UILabel *l = [self.titleLabelArray objectAtIndex:index];
+    l.text = title;
+}
+
 - (void)menuItemClicked:(UITapGestureRecognizer *)tap {
     
     NSInteger index = tap.view.tag - 2000;
@@ -179,6 +197,17 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self viewDidScrollToIndex:scrollView.contentOffset.x/ScreenWidth];
+}
+
+#pragma mark - KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    // 如果 menuscroll 的frame发生变化，bottomscroll也要跟着移动
+    if (context == MenuScrollFrameContext) {
+        CGRect frame = self.bottomScrollView.frame;
+        frame.origin.y = CGRectGetMaxY(self.menuScrollView.frame);
+        frame.size.height = self.view.frame.size.height - CGRectGetMaxY(self.menuScrollView.frame);
+        self.bottomScrollView.frame = frame;
+    }
 }
 
 #pragma mark - getters
