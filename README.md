@@ -1,7 +1,7 @@
 # PWMenuViewController
 
 ![logo](https://github.com/wangweicheng7/blog/blob/gh-pages/images/logo.png)
-![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CI Status](http://img.shields.io/travis/Paul Wang/PWMenuViewController.svg?style=flat)](https://travis-ci.org/Paul Wang/PWMenuViewController)
 [![Version](https://img.shields.io/cocoapods/v/PWMenuViewController.svg?style=flat)](http://cocoapods.org/pods/PWMenuViewController)
 [![License](https://img.shields.io/cocoapods/l/PWMenuViewController.svg?style=flat)](http://cocoapods.org/pods/PWMenuViewController)
