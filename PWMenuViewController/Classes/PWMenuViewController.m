@@ -244,6 +244,7 @@ static void * MenuScrollFrameContext = &MenuScrollFrameContext;
     if (!_flagImageView) {
         _flagImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 1)];
         _flagImageView.backgroundColor = self.tintColor;
+        _flagImageView.contentMode = UIViewContentModeCenter;
         
     }
     return _flagImageView;
