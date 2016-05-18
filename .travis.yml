@@ -1,13 +1,13 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
 language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/PWMenuViewController.xcworkspace -scheme PWMenuViewController-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -workspace Example/PWMenuViewController.xcworkspace
+  -scheme PWMenuViewController-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO |
+  xcpretty
 - pod lib lint
+deploy:
+  provider: releases
+  api_key:
+    secure: Kky7secmfD8ruvx3e33HZZ9YsZGgD5rd011lPNTDuiT4d/iolJkopyltl9BGCR24rb7jMVj+c6EKXFkMeRXd9DqOSx7a0WlscDL94GvZknSKHAtXRy5H9BPv23IGaO36/9SsktFQ7fIMeyV8bHSSAPm6aq9DrmXN4RBCekw3KmROM0UImJxZM6DoTrR7MSgUA76EhSXevA8byDroyJRRjYx3PekEir9/ZA413SEKp/lx5xatM9gnOfrHQRCg6AF28/xUklDdUIMbZrphBFleW9qPxRf6kdwpuVfffY3zshN1h91RtKPna5F0pqlDG0tnGPrdssOM6K2jp/z9dn5W/k0eTEE1DKMrZInqHj86VZ5w4hQhqQB8luxkmgxehNNGLE6n4gz7ahsj4bmQ1R+/XOHtKO1IYHlU2+si4WDbe//zNrJT+EJpdelsgVT9VygI+p0Sk/LeSXiIu2FyvB4pN8Wg9gwq2whr5dpmBRveHhB9x9E8Tt4XiKKeaOpsGwWoxcM1mvrtuii+kx3qkPITG46QuNpcWzC0yMNOtZBIopU+ICxkh/zpHyo+2cBKSgvp97UQguKoJO/W2YO1IuCuuCW/sysVM3wzlwNJgdTDolqCJx7j3wL7j6Rrfbnp+gZanUQvJsdVDRRxM1Dhqz6OPm+SOSEQwMlVv/T098SWfaE=
+  file: PWMenuViewController
+  on:
+    repo: wangweicheng7/PWMenuViewController

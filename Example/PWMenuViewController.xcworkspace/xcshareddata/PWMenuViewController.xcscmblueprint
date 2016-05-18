@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "83CC695798CD0C075F6C791B513A476261DF3D6E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "A0D499BEC3324376F92EDB4E96DBBD4A0AC28AFA" : 0,
+    "83CC695798CD0C075F6C791B513A476261DF3D6E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E52A2187-C006-4E13-B453-F0A62CB13CB5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "A0D499BEC3324376F92EDB4E96DBBD4A0AC28AFA" : "",
+    "83CC695798CD0C075F6C791B513A476261DF3D6E" : "PWMenuViewController\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PWMenuViewController",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/PWMenuViewController.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:wangweicheng7\/PWMenuViewController.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "83CC695798CD0C075F6C791B513A476261DF3D6E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:wangweicheng7\/wangweicheng7.github.io.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A0D499BEC3324376F92EDB4E96DBBD4A0AC28AFA"
+    }
+  ]
+}
